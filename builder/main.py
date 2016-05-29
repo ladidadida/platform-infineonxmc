@@ -13,7 +13,7 @@
 # limitations under the License.
 
 """
-    Builder for ST STM32 Series ARM microcontrollers.
+    Builder for Infineon XMC Series ARM microcontrollers.
 """
 
 from os.path import isfile, join
@@ -55,6 +55,7 @@ env.Replace(
         "F_CPU=$BOARD_F_CPU"
     ],
 
+#TODO: Changes ALL flags according own build script
     LINKFLAGS=[
         "-Os",
         "-Wl,--gc-sections,--relax",
@@ -64,8 +65,9 @@ env.Replace(
     ],
 
     LIBS=["c", "gcc", "m", "stdc++", "nosys"],
-
-    UPLOADER="st-flash",
+#TODO: JLinkExe needs to be called with a script file
+# Where shall this file be stored/created?
+    UPLOADER="JLinkExe",
     UPLOADERFLAGS=[
         "write",        # write in flash
         "$SOURCES",     # firmware path to flash

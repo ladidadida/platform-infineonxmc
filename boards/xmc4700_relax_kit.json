@@ -1,0 +1,22 @@
+{
+	"build": {
+     "core": "xmc4000",
+     "extra_flags": "-DXMC4700_F144x2048",
+     "f_cpu": "168000000L",
+     "ldscript": "xmc4700_f144x2048.ld",
+     "cpu": "cortex-m4",
+     "mcu": "xmc4700_f144x2048",
+     "variant": "xmc4700_f144x2048"
+  },
+  "frameworks": ["cmsis"],
+  "name": "Infineon XCM4700_RELAX_KIT",
+  "platform": "xmc4700",
+  "upload": {
+      "maximum_ram_size": 360448,
+      "maximum_size": 2097152,
+      "protocol": "gdb"
+  },
+  "url": "hhttp://www.infineon.com/cms/en/product/microcontroller/32-bit-industrial-microcontroller-based-on-arm-registered-cortex-registered-m/32-bit-xmc4000-industrial-microcontroller-arm-registered-cortex-registered-m4/XMC4700-F144K2048+AA/productType.html?productType=5546d46250cc1fdf0151679c02441dea",
+  "vendor": "Infineon"
+}
+
